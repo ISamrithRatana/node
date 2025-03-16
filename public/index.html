@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">About Us</a></li>
+            </ul>
+            <a href="">Close</a>
+        </nav>
+        <h1>Welcome to Our Coffee Shop</h1>
+        <p>Enjoy the best coffee in town, made from freshly roasted beans.</p>
+        <h2>Our Menu</h2>
+    </header>
+    <main>
+        <div class="order-summary" id="order-summary">
+            <h2>Order</h2>
+            <ul id="order-list"></ul>
+            <p>Total: $<span id="total-price">0.00</span></p>
+        </div>
+        <section class="menu" id="menu">
+            <button onclick="orderItem('Espresso', 2.5)">Espresso $2.50</button>
+            <button onclick="orderItem('Ice Latte', 3.5)">Ice Latte $3.50</button>
+            <button onclick="orderItem('Ice Cappuccino', 4)">Ice Cappuccino $4.00</button>
+            <button onclick="orderItem('Ice Amazon', 4.5)">Ice Amazon $4.50</button>
+            <button onclick="orderItem('Latte Frappe', 4.2)">Latte Frappe $4.20</button>
+            <button onclick="orderItem('Cappuccino Frappe', 4.2)">Cappuccino Frappe $4.20</button>
+            <button onclick="orderItem('Ice Frist', 3)">Ice Frist $3.00</button>
+            <button onclick="orderItem('Green Tea Frappe', 3.8)">Green Tea Frappe $3.80</button>
+            <button onclick="orderItem('Ice Espresso', 3.3)">Ice Espresso $3.30</button>
+            <button onclick="orderItem('Ice Green Tea', 3.5)">Ice Green Tea $3.50</button>
+        </section>
+    </main>
+    <section class="btn_">
+        <div class="btn_1">
+            <button onclick="View()">View</button>
+            <button onclick="removeOrder()">Remove item</button>
+        </div>
+        <button onclick="printDiv('order-summary')">Receipt</button>
+    </section>
+    <footer>
+        <p>&copy; 2024 Coffee Shop</p>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

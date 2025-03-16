@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const { Telegraf } = require('telegraf');
 const WebSocket = require('ws');
+const path = require('path');
 
 
 const app = express();
@@ -16,6 +17,8 @@ const wss = new WebSocket.Server({ noServer: true });
 wss.on('connection', (ws) => {
   console.log('WebSocket client connected');
 });
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 const sendMenuItemsToClients = () => {
   fs.readFile('txt.txt', 'utf8', (err, data) => {
