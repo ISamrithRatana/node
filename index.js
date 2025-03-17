@@ -26,7 +26,6 @@ const sendMenuItemsToClients = () => {
       console.error('Error reading txt.txt:', err);
       return;
     }
-
     const menuItems = data.split('\n').filter(Boolean).map(item => {
       const parts = item.split(',').map(part => part.trim());
       if (parts.length < 2) {
@@ -141,7 +140,7 @@ app.post('/sendOrder', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
-//   ConectDB();
+
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
