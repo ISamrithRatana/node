@@ -1,4 +1,3 @@
-kgj,6
-Gihtu,6
-Jtcuy,6
-Jydhu,5
+coca,4
+Water,1
+Cake,2
